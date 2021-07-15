@@ -1,6 +1,7 @@
 import { useCss } from "kremling";
 import React, { useState } from "react";
 import Exercise from "../exercise/Exercise";
+import ProgressBar from './ProgressBar/progress-bar.component'
 
 const ProgressBarExercise = () => {
   return (
@@ -22,7 +23,7 @@ const Solution = () => {
   const [loading, setLoading] = useState()
   return (
     <div {...useCss(css)}>
-      <div className='progressBar' />
+      <ProgressBar loading={loading} />
       <div className='buttonWrapper'>
         <button onClick={() => setLoading(true)}>
           {loading ? "LOADING..." : "START REQUEST"}
@@ -38,14 +39,6 @@ const Solution = () => {
 };
 
 const css = `
-  & .progressBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 6px;
-    width: 100%;
-    background: linear-gradient(to right, var(--sunset), var(--red));
-  }
   & button {
     font-weight: 500;
     border: var(--green) 1px solid;
