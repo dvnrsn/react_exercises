@@ -11,6 +11,9 @@ body {
   font-weight: 400;
   letter-spacing: -0.25px;
   text-align: left;
+  --coral: #{$coral};
+  --red: #{$red};
+  --sunset: #{$sunset};
 }
 
 a,
