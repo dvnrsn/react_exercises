@@ -19,15 +19,20 @@ export default ProgressBarExercise;
 // ----------------------------------------------------------------------------------
 
 const Solution = () => {
+  const [loading, setLoading] = useState()
   return (
     <div {...useCss(css)}>
       <div className='progressBar' />
-      <button>
-        Start Request
-      </button>
-      <button className='red'>
-        Finish Request
-      </button>
+      <div className='buttonWrapper'>
+        <button onClick={() => setLoading(true)}>
+          {loading ? "LOADING..." : "START REQUEST"}
+        </button>
+      </div>
+      <div className='buttonWrapper'>
+        <button onClick={() => setLoading(false)} className='red'>
+          FINISH REQUEST
+        </button>
+      </div>
     </div>
   )
 };
@@ -42,9 +47,10 @@ const css = `
     background: linear-gradient(to right, var(--sunset), var(--red));
   }
   & button {
+    font-weight: 500;
     border: var(--green) 1px solid;
     color: var(--green);
-    padding: .6rem 1.2rem;
+    padding: .8rem 1.2rem;
     border-radius: 2rem;
   }
   & button:hover {
@@ -58,5 +64,10 @@ const css = `
   & .red {
     color: var(--red);
     border-color: var(--red);
+  }
+  & .buttonWrapper {
+    margin-right: .8rem;
+    display: inline-block;
+    width: 10rem;
   }
 `
