@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Exercise from "../exercise/Exercise";
 import ProgressBar from './ProgressBar/progress-bar.component'
 import Button from './Button/button-component'
-// import ProgressBarNoBreak from "./ProgressBar/progress-bar-no-break.component";
+import ProgressBarNoBreak from "./ProgressBar/progress-bar-no-break.component";
 
 const ProgressBarExercise = () => {
   return (
@@ -24,8 +24,8 @@ export const Solution = () => {
   const [loading, setLoading] = useState()
   return (
     <>
-      <ProgressBar loading={loading} />
-      {/* <ProgressBarNoBreak loading={loading} /> */}
+      {/* <ProgressBar loading={loading} /> */}
+      <ProgressBarNoBreak loading={loading} />
       <Button onClick={() => setLoading(true)}>
         {loading ? "LOADING..." : "START REQUEST"}
       </Button>
