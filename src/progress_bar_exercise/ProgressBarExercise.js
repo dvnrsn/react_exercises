@@ -25,6 +25,9 @@ const Solution = () => {
       <button>
         Start Request
       </button>
+      <button>
+        Finish Request
+      </button>
     </div>
   )
 };
@@ -46,5 +49,10 @@ const css = `
   }
   button:hover {
     border: var(--green) 2px solid;
+    margin: -1px;
+  }
+  button:active {
+    border: var(--green) 3px solid;
+    margin: -2px;
   }
 `
