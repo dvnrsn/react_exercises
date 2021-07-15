@@ -7,6 +7,7 @@ ul, ol {
 body {
   color: $gray-darkest;
   font-family: $standard-font;
+  --green: #{$green};
 }
 
 .layout-container {
