@@ -22,7 +22,9 @@ const Solution = () => {
   return (
     <div {...useCss(css)}>
       <div className='progressBar' />
-      Add solution here
+      <button>
+        Start Request
+      </button>
     </div>
   )
 };
@@ -35,5 +37,14 @@ const css = `
     height: 6px;
     width: 100%;
     background: linear-gradient(to right, var(--sunset), var(--red));
+  }
+  button {
+    border: var(--green) 1px solid;
+    color: var(--green);
+    padding: .6rem 1.2rem;
+    border-radius: 2rem;
+  }
+  button:hover {
+    border: var(--green) 2px solid;
   }
 `
