@@ -1,5 +1,5 @@
 import { useCss } from "kremling";
-import React from "react";
+import React, { useState } from "react";
 import Exercise from "../exercise/Exercise";
 
 const ProgressBarExercise = () => {
@@ -25,7 +25,7 @@ const Solution = () => {
       <button>
         Start Request
       </button>
-      <button>
+      <button className='red'>
         Finish Request
       </button>
     </div>
@@ -41,18 +41,22 @@ const css = `
     width: 100%;
     background: linear-gradient(to right, var(--sunset), var(--red));
   }
-  button {
+  & button {
     border: var(--green) 1px solid;
     color: var(--green);
     padding: .6rem 1.2rem;
     border-radius: 2rem;
   }
-  button:hover {
-    border: var(--green) 2px solid;
+  & button:hover {
+    border-width: 2px;
     margin: -1px;
   }
-  button:active {
-    border: var(--green) 3px solid;
+  & button:active {
+    border-width: 3px;
     margin: -2px;
+  }
+  & .red {
+    color: var(--red);
+    border-color: var(--red);
   }
 `
