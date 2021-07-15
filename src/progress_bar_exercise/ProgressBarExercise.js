@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Exercise from "../exercise/Exercise";
 import ProgressBar from './ProgressBar/progress-bar.component'
 import Button from './Button/button-component'
-import ProgressBarNoBreak from "./ProgressBar/progress-bar-no-break.component";
+// import ProgressBarNoBreak from "./ProgressBar/progress-bar-no-break.component";
 
 const ProgressBarExercise = () => {
   return (
